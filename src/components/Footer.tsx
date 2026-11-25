@@ -118,9 +118,28 @@ export const Footer: React.FC<FooterProps> = ({ onSelectServiceName }) => {
           </div>
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="flex flex-col items-center justify-between gap-3 border-t border-black/[0.06] pt-7 text-[12.5px] text-[#5C5E62] sm:flex-row">
+        {/* Bottom Copyright & Powered by */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-black/[0.06] pt-7 text-[12.5px] text-[#5C5E62] sm:flex-row">
           <p>© {year} WAGA SERVICES. Todos os direitos reservados.</p>
+
+          <a
+            href="https://wehosthere.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-[#5C5E62] transition-colors hover:text-[#171A20]"
+            aria-label="Powered by wehosthere.com"
+          >
+            <span>Powered by</span>
+            <span className="inline-flex items-center gap-1.5 rounded-md bg-black px-2 py-0.5 shadow-sm transition-transform duration-200 group-hover:scale-[1.03]">
+              <img
+                src={`/${encodeURIComponent('Logotipo de Nuvem WeHosThere.png')}`}
+                alt="WeHosThere"
+                className="h-5 w-auto object-contain"
+              />
+            </span>
+            <span className="font-medium text-[#171A20]">wehosthere.com</span>
+          </a>
+
           <p>{CONTACT_INFO.location} · Assistência 24 horas</p>
         </div>
       </div>
