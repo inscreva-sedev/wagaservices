@@ -17,7 +17,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onRequestService }) 
                 src={ABOUT_CONTENT.image}
                 alt={ABOUT_CONTENT.imageAlt}
                 loading="lazy"
-                className="h-[360px] sm:h-[460px] lg:h-[520px] w-full object-cover object-center transition-transform duration-700 ease-tesla hover:scale-[1.02]"
+                className="h-[420px] sm:h-[500px] lg:h-[560px] w-full object-cover object-[center_15%] transition-transform duration-700 ease-tesla hover:scale-[1.02]"
               />
             </div>
           </div>

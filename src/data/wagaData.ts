@@ -1,13 +1,3 @@
-import hero1Img from '../assets/images/hero-1.jpg';
-import hero2Img from '../assets/images/hero-2.jpg';
-import hero3Img from '../assets/images/hero-3.jpg';
-import plumbingImg from '../assets/images/service-plumbing.jpg';
-import electricalImg from '../assets/images/service-electrical.jpg';
-import paintingImg from '../assets/images/service-painting.jpg';
-import maintenanceImg from '../assets/images/service-maintenance.jpg';
-import aboutTeamImg from '../assets/images/about-team.jpg';
-import emergencyImg from '../assets/images/emergency-24h.jpg';
-
 const pubImg = (filename: string) => `/images/${encodeURIComponent(filename)}`;
 
 export interface HeroSlide {
@@ -63,24 +53,24 @@ export const HERO_SLIDES: HeroSlide[] = [
     eyebrow: 'WAGA SERVICES',
     headline: 'Soluções profissionais para o seu lar e negócio.',
     subtitle: 'Qualidade, segurança e profissionalismo em cada serviço.',
-    image: hero1Img,
-    imageAlt: 'Equipa técnica da Waga Services em inspecção num edifício moderno',
+    image: pubImg('Casa de banho moderna com azulejos ondulados.png'),
+    imageAlt: 'Acabamento moderno de casa de banho executado pela Waga Services',
   },
   {
     id: 2,
     eyebrow: 'WAGA SERVICES',
     headline: 'Qualidade e confiança em cada intervenção.',
     subtitle: 'Qualidade, segurança e profissionalismo em cada serviço.',
-    image: hero2Img,
-    imageAlt: 'Técnico especializado a executar instalação eléctrica de precisão',
+    image: pubImg('Sistema de Água PLASTEX no Terraço.png'),
+    imageAlt: 'Sistema profissional de reservatório de água PLASTEX e bombagem no terraço',
   },
   {
     id: 3,
     eyebrow: 'WAGA SERVICES',
     headline: 'Assistência e manutenção 24 horas.',
     subtitle: 'Qualidade, segurança e profissionalismo em cada serviço.',
-    image: hero3Img,
-    imageAlt: 'Técnico de assistência 24 horas preparado para intervenção rápida',
+    image: pubImg('Instalação Hidráulica com Contadores e Válvulas.png'),
+    imageAlt: 'Central hidráulica instalada com contadores e válvulas de precisão',
   },
 ];
 
@@ -89,8 +79,8 @@ export const SERVICES: ServiceItem[] = [
     id: 'canalizacao',
     title: 'Canalização',
     shortDescription: 'Instalação, reparação e manutenção de sistemas hidráulicos.',
-    image: plumbingImg,
-    imageAlt: 'Técnico a calibrar sistema hidráulico moderno com precisão',
+    image: pubImg('Instalação Hidráulica com Contadores e Válvulas.png'),
+    imageAlt: 'Central hidráulica com contadores e válvulas instalada pela Waga Services',
     overview:
       'Executamos projectos completos de redes hidráulicas residenciais e empresariais, desde tubagem PPR embutida até centrais de contadores, válvulas redutoras de pressão e sistemas de reservatórios.',
     highlights: [
@@ -109,14 +99,18 @@ export const SERVICES: ServiceItem[] = [
         src: pubImg('Instalação de Canalização em Parede de Cimento.png'),
         caption: 'Rede de abastecimento e esgoto embutida em alvenaria',
       },
+      {
+        src: pubImg('Renovação com Canalização Verde(calc).png'),
+        caption: 'Renovação de rede hidráulica em PPR verde',
+      },
     ],
   },
   {
     id: 'electricidade',
     title: 'Electricidade',
     shortDescription: 'Instalações eléctricas, reparações e assistência técnica.',
-    image: electricalImg,
-    imageAlt: 'Especialista em electricidade a verificar quadro de distribuição moderno',
+    image: pubImg('Instalação Elétrica com Condutas PVC.png'),
+    imageAlt: 'Infra-estrutura eléctrica organizada com condutas PVC e caixa de quadro',
     overview:
       'Soluções eléctricas seguras e conformes às normas técnicas para residências, escritórios, condomínios e espaços comerciais, desde a infra-estrutura em obra até quadros de distribuição.',
     highlights: [
@@ -137,8 +131,8 @@ export const SERVICES: ServiceItem[] = [
     id: 'pintura',
     title: 'Pintura',
     shortDescription: 'Pintura interior, exterior e acabamentos profissionais.',
-    image: paintingImg,
-    imageAlt: 'Profissional a aplicar pintura interior de acabamento fino em espaço moderno',
+    image: pubImg('Escada e Balde de Tinta na Fachada.png'),
+    imageAlt: 'Pintura e acabamento profissional de fachada exterior pela Waga Services',
     overview:
       'Transformamos ambientes interiores e fachadas exteriores com preparação rigorosa de superfícies, tintas resistentes ao clima moçambicano e acabamentos limpos e duradouros.',
     highlights: [
@@ -159,21 +153,25 @@ export const SERVICES: ServiceItem[] = [
     id: 'manutencao',
     title: 'Manutenção',
     shortDescription: 'Manutenção preventiva, correctiva e serviços de emergência 24 horas.',
-    image: maintenanceImg,
-    imageAlt: 'Engenheiro de manutenção a inspeccionar equipamentos técnicos num edifício moderno',
+    image: pubImg('Pátio Moderno com Portão de Madeira.png'),
+    imageAlt: 'Manutenção geral e acabamentos exteriores em imóvel moderno',
     overview:
       'Planos contínuos e intervenções pontuais para manter imóveis, sistemas de abastecimento de água e infra-estruturas empresariais sempre operacionais, seguros e valorizados.',
     highlights: [
       'Contratos de manutenção preventiva para empresas, condomínios e instituições',
       'Inspecções periódicas de canalização, electricidade, bombagem e acabamentos',
-      'Manutenção correctiva rápida com equipa multidisciplinar',
+      'Manutenção correctiva rápida com equipa multidisciplinar devidamente uniformizada',
       'Linha permanente de emergência 24 horas por dia, 7 dias por semana',
     ],
     responseTime: 'Disponibilidade contínua 24/7',
     galleryImages: [
       {
+        src: pubImg('Homem com uniforme refletor numa oficina.png'),
+        caption: 'Equipa técnica fardada e equipada para manutenção residencial e empresarial',
+      },
+      {
         src: pubImg('Sistema de Água PLASTEX no Terraço.png'),
-        caption: 'Sistema de reservatório e bomba de pressão no terraço',
+        caption: 'Manutenção de sistemas de reservatório e bombagem',
       },
     ],
   },
@@ -250,15 +248,31 @@ export const PROJECT_GALLERY: ProjectGalleryItem[] = [
   },
   {
     id: 'proj-canalizacao-parede',
-    title: 'Rede de Canalização Embutida',
+    title: 'Rede de Canalização em Parede de Cimento',
     category: 'Canalização',
     serviceValue: 'Canalização',
     image: pubImg('Instalação de Canalização em Parede de Cimento.png'),
     alt: 'Instalação de tubagem de água em PPR verde e esgoto em PVC na parede',
   },
   {
+    id: 'proj-canalizacao-bruta',
+    title: 'Canalização Embutida em Parede Bruta',
+    category: 'Canalização',
+    serviceValue: 'Canalização',
+    image: pubImg('Instalação de Canalização em Parede Bruta.png'),
+    alt: 'Execução de rede de canalização em alvenaria bruta',
+  },
+  {
+    id: 'proj-renovacao-verde',
+    title: 'Renovação de Rede Hidráulica em PPR',
+    category: 'Canalização',
+    serviceValue: 'Canalização',
+    image: pubImg('Renovação com Canalização Verde(calc).png'),
+    alt: 'Substituição de canalização em parede para remodelação de cozinha/varanda',
+  },
+  {
     id: 'proj-plastex-terraco',
-    title: 'Sistema de Reservatório e Bombagem',
+    title: 'Sistema de Reservatório PLASTEX e Bombagem',
     category: 'Canalização',
     serviceValue: 'Sistemas de Água e Bombagem',
     image: pubImg('Sistema de Água PLASTEX no Terraço.png'),
@@ -312,6 +326,14 @@ export const PROJECT_GALLERY: ProjectGalleryItem[] = [
     image: pubImg('Pátio Moderno com Portão de Madeira.png'),
     alt: 'Pátio residencial moderno preparado para acabamento exterior',
   },
+  {
+    id: 'proj-tecnico-uniformizado',
+    title: 'Equipa Técnica e Assistência em Obra',
+    category: 'Remodelação & Obras',
+    serviceValue: 'Manutenção',
+    image: pubImg('Homem com uniforme refletor numa oficina.png'),
+    alt: 'Técnico da Waga Services com uniforme refletor pronto para intervenção',
+  },
 ];
 
 export const ABOUT_CONTENT = {
@@ -321,8 +343,8 @@ export const ABOUT_CONTENT = {
     'A Waga Services dedica-se à prestação de serviços profissionais para residências, empresas e instituições, oferecendo soluções eficientes em canalização, pintura, electricidade e manutenção.',
     'Trabalhamos com compromisso, qualidade e segurança para garantir a satisfação dos nossos clientes.',
   ],
-  image: aboutTeamImg,
-  imageAlt: 'Equipa de técnicos qualificados da Waga Services em planeamento técnico',
+  image: pubImg('Homem com uniforme refletor numa oficina.png'),
+  imageAlt: 'Técnico qualificado da Waga Services com uniforme refletor em intervenção residencial',
 };
 
 export const DIFFERENTIATORS: DifferentiatorItem[] = [
@@ -358,6 +380,6 @@ export const EMERGENCY_CONTENT = {
   description:
     'Conte com a Waga Services para serviços de manutenção e assistência de emergência 24 horas.',
   cta: 'Contactar Agora',
-  image: emergencyImg,
-  imageAlt: 'Técnico da Waga Services a prestar assistência técnica de emergência',
+  image: pubImg('Caminho de pavimento em obra.png'),
+  imageAlt: 'Técnico da Waga Services em execução técnica de campo',
 };
