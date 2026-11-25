@@ -8,6 +8,7 @@ import { DifferentiatorsSection } from './components/DifferentiatorsSection';
 import { EmergencySection } from './components/EmergencySection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { ScrollNavigator } from './components/ScrollNavigator';
 import { ServiceItem } from './data/wagaData';
 
 export function App() {
@@ -76,6 +77,8 @@ export function App() {
       </main>
 
       <Footer onSelectServiceName={(name) => setPreselectedServiceName(name)} />
+
+      <ScrollNavigator />
 
       <ServiceModal
         service={selectedService}
