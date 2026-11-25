@@ -10,7 +10,7 @@ Website institucional da **WAGA SERVICES** (Moçambique), desenvolvido em React,
 - **Secções Sobre Nós, Diferenciais e Emergência 24h**.
 - **Contactos, WhatsApp e Formulário de Solicitação de Serviço** com registo persistente no **MongoDB** e envio opcional de fotografia via **Cloudinary**.
 
-## Configuração
+## Configuração Local
 
 1. Instalar dependências:
 
@@ -42,3 +42,13 @@ npm run dev:full
 npm run build
 npm start
 ```
+
+## Deploy na Vercel
+
+O projecto está configurado para a Vercel com `vercel.json` e Serverless Function em `api/index.ts`.
+
+No painel da Vercel (*Settings → Environment Variables*), configure:
+- `MONGODB_URI`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`

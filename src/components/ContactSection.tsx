@@ -61,8 +61,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] ?? null;
-    if (file && file.size > 8 * 1024 * 1024) {
-      setErrorMessage('A fotografia não pode exceder 8 MB.');
+    if (file && file.size > 4 * 1024 * 1024) {
+      setErrorMessage('A fotografia não pode exceder 4 MB.');
       return;
     }
     setPhotoFile(file);

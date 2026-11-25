@@ -1,7 +1,13 @@
 import dns from 'node:dns';
 import mongoose from 'mongoose';
 
-export async function connectDatabase(): Promise<void> {
+let connectionPromise: Promise<typeof mongoose> | null = null;
+
+export async function connectDatabase(): Promise<typeof mongoose> {
+  if (mongoose.connection.readyState === 1) {
+    return mongoose;
+  }
+
   const uri = process.env.MONGODB_URI;
   if (!uri) {
     throw new Error('MONGODB_URI não está definida nas variáveis de ambiente (.env).');
@@ -18,9 +24,20 @@ export async function connectDatabase(): Promise<void> {
 
   mongoose.set('strictQuery', true);
 
-  await mongoose.connect(uri, {
-    serverSelectionTimeoutMS: 10000,
-  });
+  if (!connectionPromise) {
+    connectionPromise = mongoose
+      .connect(uri, {
+        serverSelectionTimeoutMS: 10000,
+      })
+      .then((conn) => {
+        console.log(`[MongoDB] Ligado com sucesso à base de dados: ${conn.connection.name}`);
+        return conn;
+      })
+      .catch((err) => {
+        connectionPromise = null;
+        throw err;
+      });
+  }
 
-  console.log(`[MongoDB] Ligado com sucesso à base de dados: ${mongoose.connection.name}`);
+  return connectionPromise;
 }
